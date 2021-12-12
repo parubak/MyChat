@@ -25,10 +25,7 @@ try {
     }
     
 
-    $title = "Hello from our test site";
-    // $header="";
-    // $header = empty($_SESSION["user"])? loadView(__DIR__ . "/../app/views/header.php"):loadView(__DIR__ . "/../app/views/headerin.php");
-    // loadView(__DIR__ . "/../app/views/header.php");
+    $title = "Chat";
     $footer = loadView(__DIR__ . "/../app/views/footer.php");
 
     $uri = trim($_SERVER['REQUEST_URI'], "?");
@@ -39,9 +36,6 @@ try {
 
     if (!empty($routes[$uri])) {
         $route = $routes[$uri];
-        // $_SERVER['REQUEST_URI'] == "/news"
-        // $_SERVER["REQUEST_METHOD"] == GET
-        // $_SERVER["REQUEST_METHOD"] == POST
 
         if (!empty($route[$_SERVER["REQUEST_METHOD"]])) {
             $data = $route[$_SERVER["REQUEST_METHOD"]];

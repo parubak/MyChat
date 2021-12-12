@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 const HTTP_GET = "GET";
 const HTTP_POST = "POST";
@@ -26,12 +27,10 @@ return [
                     "mess" => $mess,
                 ]);
             }
-
         ],
-
     ],
 
-    "/chat" => [ // <--------------
+    "/chat" => [ 
         HTTP_GET => [
             "handler" => fn () => loadView(__DIR__ . "/../app/views/chat.php", [
                 "header" =>  loadView(__DIR__ . "/../app/views/header.php")
@@ -156,14 +155,7 @@ return [
                         "header" =>  loadView(__DIR__ . "/../app/views/header.php")
                     ]);
                 }
-
-                //
-
-                // проверить что пользователь существует +
-                // проверяем что пароль совпадает +
-                // редиректим пользователя на приватную страницу
             }
         ]
     ]
-
 ];
