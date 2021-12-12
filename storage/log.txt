@@ -1,0 +1,6 @@
+[2021-12-12 16:48:20] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'step-group1.users' doesn't exist File: /var/www/routes/web.php, Line: 136
+[2021-12-12 16:48:36] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'step-group1.users' doesn't exist File: /var/www/routes/web.php, Line: 97
+[2021-12-12 16:48:48] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'step-group1.users' doesn't exist File: /var/www/routes/web.php, Line: 97
+[2021-12-12 16:48:53] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'step-group1.users' doesn't exist File: /var/www/routes/web.php, Line: 97
+[2021-12-12 16:51:52] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'step-group1.messages' doesn't exist File: /var/www/routes/web.php, Line: 18
+[2021-12-12 16:52:36] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'step-group1.messages' doesn't exist File: /var/www/routes/web.php, Line: 18
