@@ -1,5 +1,6 @@
 
 .vscode/launch.json
-docker/mysql/
+
 .idea/
 storage/log.txt
+# docker/
