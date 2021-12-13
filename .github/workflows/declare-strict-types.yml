@@ -28,4 +28,4 @@ jobs:
 
       - name: Declare strict types
         run: |
-          ./vendor/bin/phpinsights --no-interaction --min-quality=80 --min-complexity=90 --min-architecture=75 --min-style=95
+          ./ --no-interaction --min-quality=80 --min-complexity=90 --min-architecture=75 --min-style=95
