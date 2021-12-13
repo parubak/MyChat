@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-class TruncateTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+
+class TruncateTest extends TestCase
 {
     public function testShortStringRemainsAsIs()
     {
