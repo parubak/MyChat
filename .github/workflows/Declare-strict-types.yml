@@ -1,0 +1,29 @@
+name: Declare-strict-types-check-test
+on: [push]
+jobs:
+  delcare-strict-types:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP with composer v2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          tools: composer:v2
+
+      - name: Composer Cache
+        uses: actions/cache@v1
+        with:
+          path: vendor
+          key: composer-dev-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            composer-dev-${{ hashFiles('composer.lock') }}
+            composer-dev-
+      - name: Composer Install Dev
+        run: |
+          composer install
+      - name: Declare strict types
+        run: |
+          ./vendor/bin/phpinsights --no-interaction --min-quality=80 --min-complexity=90 --min-architecture=75 --min-style=95
