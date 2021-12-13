@@ -1,0 +1,38 @@
+name: Declare-strict-types-check
+on: [push]
+
+jobs:
+  delcare-strict-types:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./MyChat
+    steps:
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+
+      - name: Print Hello world
+        run: echo "Hello World TEST" 
+
+      # - name: Composer Cache
+      #   uses: actions/cache@v1
+      #   with:
+      #     path: vendor
+      #     key: composer-dev-${{ hashFiles('composer.lock') }}
+      #     restore-keys: |
+      #       composer-dev-${{ hashFiles('composer.lock') }}
+      #       composer-dev-
+
+      # - name: Composer Install Dev
+      #   run: |
+      #     composer install
+
+
+      - name: Declare strict types
+        run: |
+          ./vendor/bin/phpinsights --no-interaction --min-quality=80 --min-complexity=90 --min-architecture=75 --min-style=95
+  my-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello Message
+      run : echo "Hello World Deploy"  
