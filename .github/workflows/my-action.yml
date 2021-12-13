@@ -1,0 +1,16 @@
+name: Hello World
+on: [push]
+
+jobs:
+  delcare-strict-types:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Print Hello world
+      run : echo "Hello World TEST" 
+
+  my-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello Message
+      run : echo "Hello World Deploy" 

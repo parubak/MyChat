@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 try {
 
-    // https://5minphp.ru/
-
     require_once __DIR__ . "/../global/bootstrap.php";
 
     $database = require_once __DIR__ . "/../config/database.php";

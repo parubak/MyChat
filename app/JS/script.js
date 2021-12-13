@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     let elem = $("#chat_history");
-    // setInterval(loadFromServer, 5000)
+    setInterval(loadFromServer, 5000)
     Send();
 
     function loadFromServer() {

@@ -1,5 +1,5 @@
 
-docker/mysql/ib_buffer_pool
 .vscode/launch.json
-*.xml
-*.iml
+docker/mysql/
+.idea/
+storage/log.txt

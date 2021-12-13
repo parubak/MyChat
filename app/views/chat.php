@@ -4,11 +4,6 @@
 
         <div class="chat_window">
             <div class="top_menu">
-                <div class="buttons">
-                    <div class="button close"></div>
-                    <div class="button minimize"></div>
-                    <div class="button maximize"></div>
-                </div>
                 <div class="title">Chat ( <?= $_SESSION["user"]["email"] ?>)</div>
             </div>
             <ul id="chat_history" class="messages">
@@ -18,9 +13,8 @@
             <div class="bottom_wrapper clearfix">
                 <form method="post" action="/chat">
                     <div class="message_input_wrapper">
-
-                        <input id="mess_text" autofocus multiple name="message" type="text" class="message_input" placeholder="Type your message here...">
-
+                        <input id="mess_text" autofocus multiple name="message" type="text" 
+                        class="message_input" placeholder="Type your message here...">
                     </div>
                     <input class="send_message" value="Send" type="submit">
                     <div class="error"><?=$error??""?></div>
@@ -38,7 +32,7 @@
         $(document).ready(function() {
 
 let elem = $("#chat_history");
-// setInterval(loadFromServer, 5000)
+setInterval(loadFromServer, 1500)
 Send();
 
 function loadFromServer() {
@@ -80,7 +74,5 @@ $("form").submit(function(event) {
     })
 })
 })
-
-
     </script>
 </div>

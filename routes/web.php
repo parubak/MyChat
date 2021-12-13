@@ -42,14 +42,12 @@ return [
 
                 try {
                     $author = $_SESSION["user"]["email"] ?? throw new ValidateException("author is empty");
-                    // $date = date("Y-m-d H:i:s") ?? throw new ValidateException("date is empty");
                     $text = $_POST["message"] ?? throw new ValidateException("body is empty");
 
                     $stmt = $dbh->prepare("
                         INSERT INTO messages (author, text)
                         VALUES (:author, :text)");
                     $stmt->bindParam(':author', $author);
-                    // $stmt->bindParam(':date', $date);
                     $stmt->bindParam(':text', $text);
 
                     $stmt->execute();
@@ -81,7 +79,6 @@ return [
         HTTP_POST => [
             "handler" => function () use ($dbh) {
                 try {
-                    // редиректнуть на страницу авторизации
                     $email = trim($_POST["email"]) ?? throw new ValidateException("Email is empty");
                     $password = trim($_POST["password"]) ?? throw new ValidateException("Password is empty");
                     $rpassword = trim($_POST["repeat_password"]) ?? throw new ValidateException("Repeat password is empty");
