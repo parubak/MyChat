@@ -4,9 +4,9 @@ on: [push]
 jobs:
   delcare-strict-types:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./MyChat
+#     defaults:
+#       run:
+#         working-directory: ./MyChat
     steps:
       # - name: Checkout
       #   uses: actions/checkout@v2
