@@ -21,7 +21,7 @@ services:
     volumes:
       - ./docker/mysql:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: step-group1
+      MYSQL_DATABASE: DB_Chat
       MYSQL_ROOT_PASSWORD: example
     ports:
       - 3306:3306

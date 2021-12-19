@@ -16,9 +16,7 @@ return [
             "layout" => __DIR__ . "/../app/layouts/clin.php",
             "handler" => function () use ($dbh) {
                 $mess = [];
-                foreach ($dbh->query('SELECT * from messages where HOUR(NOW()) >= HOUR(date)-3
-                and (DAY(NOW())=DAY(date)
-                and YEAR(NOW())=YEAR(date))') as $r) {
+                foreach ($dbh->query('SELECT * from messages where (date+0) >= (NOW()-30000)') as $r) {
                     $mess[] = $r;
                 }
 

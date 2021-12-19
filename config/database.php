@@ -2,7 +2,7 @@
 
 return [
     "host" => "db",
-    "dbname" => "step-group1",
+    "dbname" => "DB_Chat",
     "login" => "root",
     "password" => "example"
 ];
