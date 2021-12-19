@@ -16,5 +16,6 @@ class TruncateTest extends TestCase
     {
         $result = truncate("hello world", 5);
         $this->assertEquals("hello…", $result);
+        
     }
 }
